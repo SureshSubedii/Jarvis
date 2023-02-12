@@ -14,8 +14,8 @@ engine.setProperty('voice',voices[1].id)
 def SendEmail(to,content):
     server=smtplib.SMPT('smtp.gmail.com',587)
     server.ehlo()
-    server.login('pirateninja111@gmail.com','')
-    server.sendmail('pirateninja111@gmail.com',to,content)
+    server.login('<EmailAddressHere>','')
+    server.sendmail('<EmailAddressHere>',to,content)
     server.close()
 
 
@@ -79,7 +79,7 @@ if __name__=='__main__':
             try:
                 speak("What should I say?")
                 content=takeCommand()
-                to="sureshsubedi485@gmail.com"
+                to="<Receiver'sEmailAddressHere>"
                 SendEmail(to,content)
                 speak("Email has been sent")
             except Exception as e:
